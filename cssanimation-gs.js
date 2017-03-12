@@ -113,14 +113,42 @@ TweenMax.to(".pushReleaseFrom", 0.50, {css:{scale:.5}});
 
 // Flip X
 flipX = new TimelineMax();
+flipX.set(flipX, {transformPerspective:600, rotationX:0});
 flipX
-  .to(".flipX", 1, {rotationX:180, ease:Back.easeOut})
-  .to(".flipX", 1, {delay:0.01, rotationX:360, ease:Back.easeOut})
+  .to(".flipX", 0.8, {rotationX:-180, ease: Power3.easeOut})
+  .to(".flipX", 0.8, {delay:0.02, rotationX:0, ease: Power3.easeOut})
+
+// Flip X Zoom-In
+flipXzoomIn = new TimelineMax();
+flipXzoomIn.set(flipXzoomIn, {transformPerspective:600, rotationX:0, scale:1});
+flipXzoomIn
+  .to(".flipXzoomIn", 0.8, {rotationX:-180, scale:1.8, ease: Power3.easeOut})
+  .to(".flipXzoomIn", 0.8, {delay:0.01, rotationX:0, scale:0.8, ease: Power3.easeOut})
+  .to(".flipXzoomIn", 0.2, {rotationX:0, scale:1, ease: Power3.easeOut})
+
+// Flip X Zoom-In
+flipXzoomOut = new TimelineMax();
+flipXzoomOut.set(flipXzoomOut, {transformPerspective:600, rotationX:0, scale:1})
+flipXzoomOut
+  .to(".flipXzoomOut", 0.8, {rotationX:-180, scale:0.8, ease: Power3.easeOut})
+  .to(".flipXzoomOut", 0.8, {delay:0.01, rotationX:0, scale:1.8, ease: Power3.easeOut})
+  .to(".flipXzoomOut", 0.2, {rotationX:0, scale:1, ease: Power3.easeOut})
 
 // Flip Y
 flipY = new TimelineMax();
-flipY
-  .to(".flipY", 1, {rotationY:180, ease:Back.easeOut})
-  .to(".flipY", 1, {delay:0.01, rotationY:360, ease:Back.easeOut})
 
+flipY
+  .to(".flipY", 0.8, {rotationY:-180, transformPerspective:300, ease: Power3.easeOut})
+  .to(".flipY", 0.8, {delay:0.05, rotationY:0, transformPerspective:300, ease: Power3.easeOut})
+// TweenMax.set(flipY, {transformPerspective:600, rotationY:0})
+// TweenMax.fromTo($("flipY"), 2, 
+//                 {
+//                   rotation:180,
+//                   ease: Power4.easeInOut
+//                 }, 
+//                 {
+//                   rotation:0,
+//                   ease: Power4.easeInOut
+//                 }
+// );
 //TweenMax.to(".flipX", 1, {rotationX:360, ease:Back.easeOut});

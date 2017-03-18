@@ -1,6 +1,9 @@
+
+/*@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');*/
 body {overflow: hidden;}
 div { font-family: 'Ubuntu', sans-serif; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 100%; text-align: center; } /* center text styling */
 h1 { font-size: 5.5em; letter-spacing: -4px; font-weight: 700; color: #7e2ea0; display: inline-block; } /* h1 styling */
+h2 { font-size: 5.5em; letter-spacing: -4px; font-weight: 700; color: #7e2ea0; display: block; } /* h1 styling */
 @media screen and (max-width: 488px) { h1 { font-size: 2.6em; letter-spacing: -2px; } } /* control h1 font size below 768px screen */
 
 /* animation duration and fill mode */

@@ -113,20 +113,20 @@ TweenMax.to(".pushReleaseFrom", 0.50, {css:{scale:.5}});
 
 // Flip X
 flipX = new TimelineMax();
-flipX.set(flipX, {transformPerspective:600, rotationX:0});
+flipX.set(".flipX", {transformPerspective:600, rotationX:0});
 flipX
-  .to(".flipX", 0.8, {rotationX:-180, ease: Power3.easeOut})
-  .to(".flipX", 0.8, {delay:0.02, rotationX:0, ease: Power3.easeOut})
+  .to(".flipX", 0.4, {rotationX: 180, ease: Power3.easeOut})
+  .to(".flipX", 0.8, {rotationX:0, ease: Power3.easeOut})
 
 // Flip X Zoom-In
 flipXzoomIn = new TimelineMax();
-flipXzoomIn.set(flipXzoomIn, {transformPerspective:600, rotationX:0, scale:1});
+flipXzoomIn.set(".flipXzoomIn", {transformPerspective:600, rotationX:0, scale:1});
 flipXzoomIn
   .to(".flipXzoomIn", 0.8, {rotationX:-180, scale:1.8, ease: Power3.easeOut})
   .to(".flipXzoomIn", 0.8, {delay:0.01, rotationX:0, scale:0.8, ease: Power3.easeOut})
   .to(".flipXzoomIn", 0.2, {rotationX:0, scale:1, ease: Power3.easeOut})
 
-// Flip X Zoom-In
+// Flip X Zoom-Out
 flipXzoomOut = new TimelineMax();
 flipXzoomOut.set(flipXzoomOut, {transformPerspective:600, rotationX:0, scale:1})
 flipXzoomOut
@@ -135,20 +135,61 @@ flipXzoomOut
   .to(".flipXzoomOut", 0.2, {rotationX:0, scale:1, ease: Power3.easeOut})
 
 // Flip Y
+// TweenMax.set(flipY, {transformPerspective:600, rotationX:0});
 flipY = new TimelineMax();
+flipY.set(".flipY", {transformPerspective:600});
+flipX
+  .to(".flipY", 0.8, {rotationY: -360, ease: Back.easeOut})
+  .to(".flipY", 0.8, {rotationY:0, ease: Back.easeOut})
 
-flipY
-  .to(".flipY", 0.8, {rotationY:-180, transformPerspective:300, ease: Power3.easeOut})
-  .to(".flipY", 0.8, {delay:0.05, rotationY:0, transformPerspective:300, ease: Power3.easeOut})
-// TweenMax.set(flipY, {transformPerspective:600, rotationY:0})
-// TweenMax.fromTo($("flipY"), 2, 
-//                 {
-//                   rotation:180,
-//                   ease: Power4.easeInOut
-//                 }, 
-//                 {
-//                   rotation:0,
-//                   ease: Power4.easeInOut
-//                 }
-// );
-//TweenMax.to(".flipX", 1, {rotationX:360, ease:Back.easeOut});
+// Flip Y Zoom-In
+flipYzoomIn = new TimelineMax();
+flipYzoomIn.set(".flipYzoomIn", {transformPerspective:600, rotationY:0, scale:1});
+flipYzoomIn
+  .to(".flipYzoomIn", 0.4, {rotationY: -180, scale:1.8, ease: Power3.easeOut})
+  .to(".flipYzoomIn", 0.8, {rotationY: 0, scale:0.8, ease: Power3.easeOut})
+  .to(".flipYzoomIn", 0.1, {rotationY: 0, scale:1, ease: Power3.easeIn})
+
+// Flip Y Zoom-Out
+flipYzoomOut = new TimelineMax();
+flipYzoomOut.set(".flipYzoomOut", {transformPerspective:600, rotationY:0, scale:1});
+flipYzoomOut
+  .to(".flipYzoomOut", 0.4, {rotationY: -180, scale: 0.8, ease: Back.easeOut})
+  .to(".flipYzoomOut", 0.8, {rotationY: 0, scale: 1.8, ease: Back.easeOut})
+  .to(".flipYzoomOut", 0.1, {scale:1, ease: Back.easeIn})
+
+// Skew Left
+skewLeft = new TimelineMax();
+skewLeft
+  .to(".skewLeft", 0.7, {skewX: 30, ease: Power1.easeOut})
+  .to(".skewLeft", 0.3, {skewX: 0, ease: Power2.easeOut})
+
+// Skew Right
+skewRight = new TimelineMax();
+skewRight
+  .to(".skewRight", 0.7, {skewX: -30, ease: Power1.easeOut})
+  .to(".skewRight", 0.3, {skewX: 0, ease: Power2.easeOut})
+
+// Skew Left In
+skewInLeft = new TimelineMax();
+skewInLeft
+  .fromTo(".skewInLeft", 0.7, {x:"-100%", skewX: -40, ease: Power0.easeOut}, {x:"0%", skewX: -30, ease: Power4.easeOut})
+  .to(".skewInLeft", 0.3, {skewX: 0, ease: Power2.easeOut})
+
+// Skew Right In
+skewInRight = new TimelineMax();
+skewInRight
+  .fromTo(".skewInRight", 0.7, {x:"100%", skewX: 40, ease: Power0.easeOut}, {x:"0%", skewX: 30, ease: Power4.easeOut})
+  .to(".skewInRight", 0.3, {skewX: 0, ease: Power0.easeOut})
+
+// Skew Left Out
+skewOutLeft = new TimelineMax();
+skewOutLeft
+  .to(".skewOutLeft", 0.7, {x:0, skewX: 40, ease: Power3.easeOut})
+  .to(".skewOutLeft", 0.3, {x:"-100%", skewX: 30, ease: Power0.easeOut})
+
+// Skew Right Out
+skewOutRight = new TimelineMax();
+skewOutRight
+  .to(".skewOutRight", 0.7, {x:0, skewX: -40, ease: Power3.easeOut})
+  .to(".skewOutRight", 0.3, {x:"100%", skewX: -30, ease: Power0.easeOut})

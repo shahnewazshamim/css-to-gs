@@ -194,18 +194,29 @@ skewOutRight
   .to(".skewOutRight", 0.7, {x:0, skewX: -40, ease: Power3.easeOut})
   .to(".skewOutRight", 0.3, {x:"100%", skewX: -30, ease: Power0.easeOut})
 
-//Heartbeat
+// Heartbeat
 heartbeat = new TimelineMax({repeat:-1});
 heartbeat
   .to(".heartBeat", 0.2, {css:{scale:1.2}})
   .to(".heartBeat", 0.16, {css:{scale:1.2}})
   .to(".heartBeat", 0.2, {css:{scale:1}})
 
-//Heartbeat2
+// Heartbeat2
 heartbeat2 = new TimelineMax({repeat:-1});
 heartbeat2
-  .to(".heartBeat2", 0.2, {css:{scale:1.3}, ease: Power2.easeInOut})
-  .to(".heartBeat2", 0.2, {css:{scale:1}, ease: Power0.easeNone})
-  .to(".heartBeat2", 0.2, {css:{scale:1.3}, ease: Power2.easeInOut})
-  .to(".heartBeat2", 0.5, {css:{scale:1}, ease: Power3.easeOut})
-  // .to(".heartBeat2", 0.2, {css:{scale:1.3}})
+  .to(".heartBeat2", 0.16, {css:{scale:1.3}, ease: Power2.easeInOut})
+  .to(".heartBeat2", 0.16, {css:{scale:1}, ease: Power0.easeNone})
+  .to(".heartBeat2", 0.16, {css:{scale:1.3}, ease: Power2.easeInOut})
+  .to(".heartBeat2", 0.54, {css:{scale:1}, ease: Power3.easeOut})
+
+// Pull Release In
+pullReleaseIn = new TimelineMax();
+pullReleaseIn
+  .to(".pullReleaseIn", 0.18, {scale: 1.5, ease: Sine.easeOut})
+  .to(".pullReleaseIn", 0.7, {scale: 1, ease: Power1.easeOut})
+
+// Pull Release In
+pullReleaseOut = new TimelineMax();
+pullReleaseOut
+  .to(".pullReleaseOut", 0.18, {scale: .5, ease: Power1.easeOut})
+  .to(".pullReleaseOut", 0.7, {scale: 1, ease: Sine.easeOut})

@@ -193,3 +193,19 @@ skewOutRight = new TimelineMax();
 skewOutRight
   .to(".skewOutRight", 0.7, {x:0, skewX: -40, ease: Power3.easeOut})
   .to(".skewOutRight", 0.3, {x:"100%", skewX: -30, ease: Power0.easeOut})
+
+//Heartbeat
+heartbeat = new TimelineMax({repeat:-1});
+heartbeat
+  .to(".heartBeat", 0.2, {css:{scale:1.2}})
+  .to(".heartBeat", 0.16, {css:{scale:1.2}})
+  .to(".heartBeat", 0.2, {css:{scale:1}})
+
+//Heartbeat2
+heartbeat2 = new TimelineMax({repeat:-1});
+heartbeat2
+  .to(".heartBeat2", 0.2, {css:{scale:1.3}, ease: Power2.easeInOut})
+  .to(".heartBeat2", 0.2, {css:{scale:1}, ease: Power0.easeNone})
+  .to(".heartBeat2", 0.2, {css:{scale:1.3}, ease: Power2.easeInOut})
+  .to(".heartBeat2", 0.5, {css:{scale:1}, ease: Power3.easeOut})
+  // .to(".heartBeat2", 0.2, {css:{scale:1.3}})

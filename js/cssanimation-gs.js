@@ -105,11 +105,41 @@ TweenMax.to(".quietMad", 0.1, {y:"-=5", yoyo:true, repeat:-1});
 // Vibration
 TweenMax.to(".vibration", 0.15, {css:{scale:1.2, skewY:"1deg", skewX:"-1deg"}, ease: Power0.easeNone, repeat:-1});
 
-// pushReleaseFrom
-TweenMax.to(".pushReleaseFrom", 0.35, {css:{scale:3}});
-TweenMax.to(".pushReleaseFrom", 0.50, {css:{scale:.5}});
+// Push Release From
+pushReleaseFrom = new TimelineMax();
+pushReleaseFrom
+	.fromTo(".pushReleaseFrom", 0.2, {autoAlpha:0, scale:3}, {autoAlpha:1, scale:0.5})
+	.to(".pushReleaseFrom", 0.5, {autoAlpha:1, scale:1, ease: Power1.easeOut})
 
+// Push Release From Left
+TweenMax.from(".pushReleaseFromLeft", 0.8, {autoAlpha:0, x:"-100%", ease: Back.easeOut.config(3)});
 
+// Push Release From Right
+TweenMax.from(".pushReleaseFromRight", 0.8, {autoAlpha:0, x:"100%", ease: Back.easeOut.config(3)});
+
+// Push Release From Top
+TweenMax.from(".pushReleaseFromTop", 0.8, {autoAlpha:0, y:-200, ease: Back.easeOut.config(4)});
+
+// Push Release From Bottom
+TweenMax.from(".pushReleaseFromBottom", 0.8, {autoAlpha:0, y:200, ease: Back.easeOut.config(4)});
+
+// Push Release To
+pushReleaseTo = new TimelineMax();
+pushReleaseTo
+	.to(".pushReleaseTo", 0.3, {autoAlpha:1, scale:0.5})
+	.to(".pushReleaseTo", 0.5, {autoAlpha:0, scale:5, ease: Power1.easeOut})
+
+// Push Release To Left
+TweenMax.to(".pushReleaseToLeft", 0.85, {x:"-100%", ease: Back.easeIn.config(3)});
+
+// Push Release To Right 
+TweenMax.to(".pushReleaseToRight", 0.85, {x:"100%", ease: Back.easeIn.config(3)});
+
+// Push Release To Top
+TweenMax.to(".pushReleaseToTop", 0.85, {y:-200, ease: Back.easeIn.config(4)});
+
+// Push Release To Bottom
+TweenMax.to(".pushReleaseToBottom", 0.85, {y:200, ease: Back.easeIn.config(4)});
 
 // Flip X
 flipX = new TimelineMax();
@@ -128,7 +158,7 @@ flipXzoomIn
 
 // Flip X Zoom-Out
 flipXzoomOut = new TimelineMax();
-flipXzoomOut.set(flipXzoomOut, {transformPerspective:600, rotationX:0, scale:1})
+flipXzoomOut.set(".flipXzoomOut", {transformPerspective:600, rotationX:0, scale:1})
 flipXzoomOut
   .to(".flipXzoomOut", 0.8, {rotationX:-180, scale:0.8, ease: Power3.easeOut})
   .to(".flipXzoomOut", 0.8, {delay:0.01, rotationX:0, scale:1.8, ease: Power3.easeOut})
@@ -139,8 +169,8 @@ flipXzoomOut
 flipY = new TimelineMax();
 flipY.set(".flipY", {transformPerspective:600});
 flipX
-  .to(".flipY", 0.8, {rotationY: -360, ease: Back.easeOut})
-  .to(".flipY", 0.8, {rotationY:0, ease: Back.easeOut})
+  .to(".flipY", 0.3, {rotationY:-180, ease: Power1.easeOut})
+  .to(".flipY", 0.8, {rotationY:-360, ease: Power2.easeOut})
 
 // Flip Y Zoom-In
 flipYzoomIn = new TimelineMax();
@@ -220,3 +250,19 @@ pullReleaseOut = new TimelineMax();
 pullReleaseOut
   .to(".pullReleaseOut", 0.18, {scale: .5, ease: Power1.easeOut})
   .to(".pullReleaseOut", 0.7, {scale: 1, ease: Sine.easeOut})
+
+// Elevate Left
+elevateLeft = new TimelineMax();
+elevateLeft.set(".elevateLeft", {transformOrigin:"right"})
+elevateLeft
+  .from(".elevateLeft", 0.18, {y:"100%", rotation:"-20"})
+  .to(".elevateLeft", 0.4, {y:0, rotation:20})
+  .to(".elevateLeft", 0.25, {rotation:0})
+
+// Elevate Right
+elevateRight = new TimelineMax();
+elevateRight.set(".elevateRight", {transformOrigin:"left"})
+elevateRight
+  .from(".elevateRight", 0.18, {y:"100%", rotation:20})
+  .to(".elevateRight", 0.4, {y:0, rotation:"-20"})
+  .to(".elevateRight", 0.25, {rotation:0})

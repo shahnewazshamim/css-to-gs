@@ -266,3 +266,88 @@ elevateRight
   .from(".elevateRight", 0.18, {y:"100%", rotation:20})
   .to(".elevateRight", 0.4, {y:0, rotation:"-20"})
   .to(".elevateRight", 0.25, {rotation:0})
+
+//Roll From Left
+TweenMax.from(".rollFromLeft", 1, {x:"-100%", autoAlpha:0, rotationY:"180", perspective:600, ease: Power2.easeOut})
+
+//Roll From Right
+TweenMax.from(".rollFromRight", 1, {x:"100%", autoAlpha:0, rotationY:"-180", perspective:600, ease: Power2.easeOut})
+
+//Roll From Top
+TweenMax.from(".rollFromTop", 1, {y:"-100%", autoAlpha:0, rotationX:"180", perspective:600, ease: Power2.easeOut})
+
+//Roll From Bottom
+TweenMax.from(".rollFromBottom", 1, {y:"100%", autoAlpha:0, rotationX:"-180", perspective:600, ease: Power2.easeOut})
+
+//Roll To Left
+TweenMax.to(".rollToLeft", 1, {x:"-100%", autoAlpha:0, rotationY:"180", perspective:600, ease: Power2.easeOut})
+
+//Roll To Right
+TweenMax.to(".rollToRight", 1, {x:"100%", autoAlpha:0, rotationY:"-180", perspective:600, ease: Power2.easeOut})
+
+//Roll To Top
+TweenMax.to(".rollToTop", 1, {y:"-100%", autoAlpha:0, rotationX:"180", perspective:600, ease: Power2.easeOut})
+
+//Roll To Bottom
+TweenMax.to(".rollToBottom", 1, {y:"100%", autoAlpha:0, rotationX:"-180", perspective:600, ease: Power2.easeOut})
+
+//Rotate
+TweenMax.fromTo(".rotate", 1, {rotation:"-360", ease: Power0.easeNone}, {rotation:"0", ease: Power0.easeNone})
+
+//RotateX
+TweenMax.to(".rotateX", 1, {autoAlpha:0, rotationX:90, perspective:600, ease: Power1.easeInOut})
+
+//RotateX In
+
+// rotateXIn = new TimelineMax();
+// rotateXIn
+// .from(".rotateXIn", 0.6, {y:"-60", z:"-200%", autoAlpha:0, rotationX:"75", perspective:"600"})
+// .to(".rotateXIn", 0.2, {y:"-60", z:"-150%", autoAlpha:1, rotationX:"75", perspective:"600"})
+
+//Rotate In Left
+TweenMax.fromTo(".rotateInLeft", 1, {x:"-100%", rotation:"0", ease: Power0.easeNone}, {x:"0%", rotation:"360", ease: Power1.easeOut})
+
+//Rotate In Right
+TweenMax.fromTo(".rotateInRight", 1, {x:"100%", rotation:"0", ease: Power0.easeNone}, {x:"0%", rotation:"-360", ease: Power1.easeOut})
+
+//Rotate In Top
+TweenMax.fromTo(".rotateInTop", 1, {y:"-500%", rotation:"0", ease: Power0.easeNone}, {y:"0%", rotation:"360", ease: Power1.easeOut})
+
+//Rotate In Bottom
+TweenMax.fromTo(".rotateInBottom", 1, {y:"500%", rotation:"0", ease: Power0.easeNone}, {y:"0%", rotation:"-360", ease: Power1.easeOut})
+
+//Rotate Out Left
+TweenMax.fromTo(".rotateOutLeft", 1, {x:"0%", rotation:"360", ease: Power0.easeNone}, {x:"-100%", rotation:"0", ease: Power1.easeOut})
+
+//Rotate Out Right
+TweenMax.fromTo(".rotateOutRight", 1, {x:"0%", rotation:"-360", ease: Power0.easeNone}, {x:"100%", rotation:"0", ease: Power1.easeOut})
+
+//Rotate Out Top
+TweenMax.fromTo(".rotateOutTop", 1, {y:"0%", rotation:"360", ease: Power0.easeNone}, {y:"-500%", rotation:"0", ease: Power1.easeOut})
+
+//Rotate Out Bottom
+TweenMax.fromTo(".rotateOutBottom", 1, {y:"0%", rotation:"-360", ease: Power0.easeNone}, {y:"500%", rotation:"0", ease: Power1.easeOut})
+
+//Spin To Left
+TweenMax.fromTo(".spinToLeft", 1, {transformOrigin:"left bottom", rotation:90, autoAlpha:0}, {transformOrigin:"left bottom", rotation:0, autoAlpha:1, ease: Power1.easeOut})
+
+//Spin To Right
+TweenMax.fromTo(".spinToRight", 1, {transformOrigin:"right bottom", rotation:-90, autoAlpha:0}, {transformOrigin:"right bottom", rotation:0, autoAlpha:1, ease: Power1.easeOut})
+
+//Spin To Left
+TweenMax.fromTo(".spinToTop", 1, {transformOrigin:"left bottom", rotation:-90, autoAlpha:0}, {transformOrigin:"left bottom", rotation:0, autoAlpha:1, ease: Power1.easeOut})
+
+//Spin To Right
+TweenMax.fromTo(".spinToBottom", 1, {transformOrigin:"right bottom", rotation:90, autoAlpha:0}, {transformOrigin:"right bottom", rotation:0, autoAlpha:1, ease: Power1.easeOut})
+
+//Spin From Left
+TweenMax.to(".spinFromLeft", 1, {transformOrigin:"left bottom", rotation:90, autoAlpha:0, ease: Power1.easeOut})
+
+//Spin From Right
+TweenMax.to(".spinFromRight", 1, {transformOrigin:"right bottom", rotation:-90, autoAlpha:0, ease: Power1.easeOut})
+
+//Spin From Left
+TweenMax.to(".spinFromTop", 1, {transformOrigin:"left bottom", rotation:-90, autoAlpha:0, ease: Power1.easeOut})
+
+//Spin From Right
+TweenMax.to(".spinFromBottom", 1, {transformOrigin:"right bottom", rotation:90, autoAlpha:0, ease: Power1.easeOut})

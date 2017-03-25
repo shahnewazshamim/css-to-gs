@@ -298,11 +298,10 @@ TweenMax.fromTo(".rotate", 1, {rotation:"-360", ease: Power0.easeNone}, {rotatio
 TweenMax.to(".rotateX", 1, {autoAlpha:0, rotationX:90, perspective:600, ease: Power1.easeInOut})
 
 //RotateX In
-
-// rotateXIn = new TimelineMax();
-// rotateXIn
-// .from(".rotateXIn", 0.6, {y:"-60", z:"-200%", autoAlpha:0, rotationX:"75", perspective:"600"})
-// .to(".rotateXIn", 0.2, {y:"-60", z:"-150%", autoAlpha:1, rotationX:"75", perspective:"600"})
+//rotateXIn = new TimelineMax();
+//TweenMax.fromTo(".rotateXIn", 1, {x:"0", y:"-60", z:"-1500", autoAlpha:0, rotationX:-75, perspective:"600"}, {x:"0", y:"0", z:"0", autoAlpha:1, rotationX:0, perspective:"600"})
+// .to(".rotateXIn", 0.4, {x:"0", y:"-60", z:"-450", autoAlpha:1, rotationX:"75"})
+//.to(".rotateXIn", 0.2, {x:"0", y:"0", z:"0", autoAlpha:1, rotationX:0, perspective:"600"})
 
 //Rotate In Left
 TweenMax.fromTo(".rotateInLeft", 1, {x:"-100%", rotation:"0", ease: Power0.easeNone}, {x:"0%", rotation:"360", ease: Power1.easeOut})
@@ -351,3 +350,101 @@ TweenMax.to(".spinFromTop", 1, {transformOrigin:"left bottom", rotation:-90, aut
 
 //Spin From Right
 TweenMax.to(".spinFromBottom", 1, {transformOrigin:"right bottom", rotation:90, autoAlpha:0, ease: Power1.easeOut})
+
+//Blur In
+TweenMax.to(".blurIn", 1, {
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  color:"none"
+})
+
+//Blur In Left
+TweenMax.fromTo(".blurInLeft", 1, {x:"100%", textShadow:"none", ease:Power0.easeNone}, {
+  x:"0%",
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  color:"none",  ease: Power2.easeOut
+})
+
+//Blur In Right
+TweenMax.fromTo(".blurInRight", 1, {x:"-100%", textShadow:"none", ease:Power0.easeNone}, {
+  x:"0%",
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  color:"none",  ease: Power2.easeOut
+})
+
+//Blur In Top
+TweenMax.fromTo(".blurInTop", 1, {y:"100%", textShadow:"none", ease:Power0.easeNone}, {
+  y:"0%",
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  color:"none",  ease: Power2.easeOut
+})
+
+//Blur In Bottom
+TweenMax.fromTo(".blurInBottom", 1, {y:"-100%", textShadow:"none", ease:Power0.easeNone}, {
+  y:"0%",
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  color:"none",  ease: Power2.easeOut
+})
+
+//Blur Out
+TweenMax.from(".blurOut", 1, {
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  color:"none"
+})
+
+//Blur Out Left
+TweenMax.fromTo(".blurOutLeft", 1, {
+  x:"0%", 
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  ease:Power0.easeNone}, {
+  x:"100%", 
+  textShadow:"none", 
+  ease:Power2.easeOut
+})
+
+//Blur Out Right
+TweenMax.fromTo(".blurOutRight", 1, {
+  x:"0%", 
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  ease:Power0.easeNone}, {
+  x:"-100%", 
+  textShadow:"none", 
+  ease:Power2.easeOut
+})
+
+//Blur Out Top
+TweenMax.fromTo(".blurOutTop", 1, {
+  y:"0%", 
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  ease:Power0.easeNone}, {
+  y:"100%", 
+  textShadow:"none", 
+  ease:Power2.easeOut
+})
+
+//Blur Out Bottom
+TweenMax.fromTo(".blurOutBottom", 1, {
+  y:"0%", 
+  textShadow:"0 0 10px rgba(167, 81, 203, 0.6), 0 0 30px rgba(167, 81, 203, 0.4), 0 0 50px rgba(167, 81, 203, 0.3), 0 0 180px rgba(167, 81, 203, 0.3)", 
+  ease:Power0.easeNone}, {
+  y:"-100%", 
+  textShadow:"none", 
+  ease:Power2.easeOut
+})
+
+//Bounce From Top
+TweenMax.from(".bounceFromTop", 1.2, {y:"-100%", ease: Bounce.easeOut})
+
+//Bounce From Down
+TweenMax.from(".bounceFromDown", 1.2, {y:"100%", ease: Bounce.easeOut})
+
+//Bounce X
+TweenMax.from(".bounceX", 0.8, {scaleX:2, ease: Bounce.easeOut})
+
+//Bounce Y
+TweenMax.from(".bounceY", 0.8, {scaleY:2, ease: Bounce.easeOut})
+
+//Bounce Zoom In
+TweenMax.from(".bounceZoomIn", 1, {scale:1.6, ease: Bounce.easeOut})
+
+//Bounce Zoom Out
+TweenMax.from(".bounceZoomOut", 1, {scale:0.3, ease: Bounce.easeOut})

@@ -295,13 +295,78 @@ TweenMax.to(".rollToBottom", 1, {y:"100%", autoAlpha:0, rotationX:"-180", perspe
 TweenMax.fromTo(".rotate", 1, {rotation:"-360", ease: Power0.easeNone}, {rotation:"0", ease: Power0.easeNone})
 
 //RotateX
-TweenMax.to(".rotateX", 1, {autoAlpha:0, rotationX:90, perspective:600, ease: Power1.easeInOut})
+TweenMax.to(".rotateX", 1, {rotationX:90, perspective:600, ease: Power1.easeOut})
 
 //RotateX In
-//rotateXIn = new TimelineMax();
-//TweenMax.fromTo(".rotateXIn", 1, {x:"0", y:"-60", z:"-1500", autoAlpha:0, rotationX:-75, perspective:"600"}, {x:"0", y:"0", z:"0", autoAlpha:1, rotationX:0, perspective:"600"})
-// .to(".rotateXIn", 0.4, {x:"0", y:"-60", z:"-450", autoAlpha:1, rotationX:"75"})
-//.to(".rotateXIn", 0.2, {x:"0", y:"0", z:"0", autoAlpha:1, rotationX:0, perspective:"600"})
+TweenMax.fromTo(
+  ".rotateXIn", 
+  1, 
+  { 
+    y:-100, 
+    z:-5000, 
+    scale:0.4, 
+    autoAlpha:0, 
+    rotationX:-75, 
+    perspective:600
+  }, 
+  {
+    y:0, 
+    z:0, 
+    scale:1, 
+    autoAlpha:1, 
+    rotationX:0, 
+    perspective:600, 
+    ease: Power2.easeOut
+  }
+)
+
+//RotateX Out
+TweenMax.to(
+  ".rotateXOut", 
+  1, 
+  { 
+    y:-100, 
+    z:-5000, 
+    scale:0.4, 
+    autoAlpha:0, 
+    rotationX:-75, 
+    perspective:600, 
+    ease: Power2.easeOut
+  }
+)
+
+//RotateY
+TweenMax.to(".rotateY", 1, {rotationY:90, perspective:600, ease: Sine.easeOut})
+
+//RotateY In
+// TweenMax.from(
+//   ".rotateYIn", 
+//   1, 
+//   { 
+//     x:100, 
+//     z:-5000, 
+//     scale:0.8, 
+//     autoAlpha:0, 
+//     rotationY:-90, 
+//     perspective:600, 
+//     ease: Power2.easeOut
+//   }
+// )
+
+//RotateY Out
+// TweenMax.to(
+//   ".rotateYOut", 
+//   1, 
+//   { 
+//     y:-100, 
+//     z:-5000, 
+//     scale:0.4, 
+//     autoAlpha:0, 
+//     rotationY:-75, 
+//     perspective:600, 
+//     ease: Power2.easeOut
+//   }
+// )
 
 //Rotate In Left
 TweenMax.fromTo(".rotateInLeft", 1, {x:"-100%", rotation:"0", ease: Power0.easeNone}, {x:"0%", rotation:"360", ease: Power1.easeOut})
@@ -448,3 +513,194 @@ TweenMax.from(".bounceZoomIn", 1, {scale:1.6, ease: Bounce.easeOut})
 
 //Bounce Zoom Out
 TweenMax.from(".bounceZoomOut", 1, {scale:0.3, ease: Bounce.easeOut})
+
+//Bounce In Top
+TweenMax.fromTo(
+  ".bounceInTop", 
+  2, 
+  {
+    y:-500, 
+    bezier:[
+    {x:0, y:0.9}, 
+    {x:0, y:0.03}, 
+    {x:0, y:0.69}, 
+    {x:0, y:0.22}], 
+    ease: Sine.easeIn
+  }, 
+  {
+    y:0, 
+    ease: Bounce.easeOut
+  }
+)
+
+//Bounce In Bottom
+TweenMax.fromTo(
+  ".bounceInBottom", 
+  2, 
+  {
+    y:500, 
+    bezier:[
+    {x:0, y:0.9}, 
+    {x:0, y:0.03}, 
+    {x:0, y:0.69}, 
+    {x:0, y:0.22}], 
+    ease: Sine.easeIn
+  }, 
+  {
+    y:0, 
+    ease: Bounce.easeOut
+  }
+)
+
+//Bounce In Left
+TweenMax.fromTo(
+  ".bounceInLeft", 
+  2, 
+  {
+    x:"-100%", 
+    bezier:[
+    {x:0.9, y:0}, 
+    {x:0.03, y:0}, 
+    {x:0.69, y:0}, 
+    {x:0.22, y:0}], 
+    ease: Sine.easeIn
+  }, 
+  {
+    x:"0%", 
+    ease: Bounce.easeOut
+  }
+)
+
+//Bounce In Right
+TweenMax.fromTo(
+  ".bounceInRight", 
+  2, 
+  {
+    x:"100%", 
+    bezier:[
+    {x:0.9, y:0}, 
+    {x:0.03, y:0}, 
+    {x:0.69, y:0}, 
+    {x:0.22, y:0}], 
+    ease: Sine.easeIn
+  }, 
+  {
+    x:"0%", 
+    ease: Bounce.easeOut
+  }
+)
+
+//Bounce Out Top 
+TweenMax.to(
+  ".bounceOutTop", 
+  2, 
+  {
+    y:-500, 
+    bezier:[
+    {x:0, y:0.9}, 
+    {x:0, y:0.03}, 
+    {x:0, y:0.69}, 
+    {x:0, y:0.22}], 
+    ease: Bounce.easeIn
+  }
+)
+
+//Bounce Out Bottom 
+TweenMax.to(
+  ".bounceOutBottom", 
+  2, 
+  {
+    y:500, 
+    bezier:[
+    {x:0, y:0.9}, 
+    {x:0, y:0.03}, 
+    {x:0, y:0.69}, 
+    {x:0, y:0.22}], 
+    ease: Bounce.easeIn
+  }
+)
+
+//Bounce Out Left
+TweenMax.to(
+  ".bounceOutLeft", 
+  2, 
+  {
+    x:"-100%", 
+    bezier:[
+    {x:0.9, y:0}, 
+    {x:0.03, y:0}, 
+    {x:0.69, y:0}, 
+    {x:0.22, y:0}], 
+    ease: Bounce.easeIn
+  }
+)
+
+//Bounce Out Right
+TweenMax.to(
+  ".bounceOutRight", 
+  2, 
+  {
+    x:"100%", 
+    bezier:[
+    {x:0.9, y:0}, 
+    {x:0.03, y:0}, 
+    {x:0.69, y:0}, 
+    {x:0.22, y:0}], 
+    ease: Bounce.easeIn
+  }
+)
+
+// Perspective To Top
+TweenMax.set(".perspectiveToTop", {transformPerspective:500, transformStyle:"preserve-3d"})
+TweenMax.to(".perspectiveToTop", 1.8, {autoAlpha:0, y:-80, z:-50, rotationX:90, ease: Sine.easeIn})
+
+// Perspective To Bottom
+TweenMax.set(".perspectiveToBottom", {transformPerspective:500, transformStyle:"preserve-3d"})
+TweenMax.to(".perspectiveToBottom", 1.8, {autoAlpha:0, y:80, z:50, rotationX:90, ease: Sine.easeIn})
+
+// Zoom In
+TweenMax.from(".zoomIn", 1, {autoAlpha:0, scale:10, ease: Power2.easeOut})
+
+// Zoom In Left
+TweenMax.from(".zoomInLeft", 1.5, {autoAlpha:0, scale:8, x:"-500%", ease: Power2.easeOut})
+
+// Zoom In Right
+TweenMax.from(".zoomInRight", 1.5, {autoAlpha:0, scale:10, x:"500%", ease: Power2.easeOut})
+
+// Zoom In Top
+TweenMax.from(".zoomInTop", 1.5, {autoAlpha:0, scale:10, y:"-500%", ease: Power2.easeOut})
+
+// Zoom In Bottom
+TweenMax.from(".zoomInBottom", 1.5, {autoAlpha:0, scale:10, y:"500%", ease: Power2.easeOut})
+
+// Zoom Out
+TweenMax.to(".zoomOut", 1.5, {autoAlpha:0, scale:10, ease: Power2.easeOut})
+
+// Zoom Out Left
+TweenMax.to(".zoomOutLeft", 1.5, {autoAlpha:0, scale:8, x:"-400%", ease: Power2.easeOut})
+
+// Zoom Out Right
+TweenMax.to(".zoomOutRight", 1.5, {autoAlpha:0, scale:8, x:"400%", ease: Power2.easeOut})
+
+// Zoom Out Top
+TweenMax.to(".zoomOutTop", 1.5, {autoAlpha:0, scale:10, y:"-500%", ease: Power2.easeOut})
+
+// Zoom Out Bottom
+TweenMax.to(".zoomOutBottom", 1.5, {autoAlpha:0, scale:10, y:"500%", ease: Power2.easeOut})
+
+// Dance Top
+//TweenMax.from(".danceTop", 1, {css: {perspective: 400, transformOrigin: "top", skewX:90}, ease: Elastic.easeOut.config(1, 0.2)})
+
+// Dance Middle
+TweenMax.from(".danceMiddle", 2, {skewX:30, ease: Elastic.easeOut.config(1, 0.2)})
+
+//
+
+    cssAnimation = new SplitText(".leFadeIn", {type:"chars"}), 
+    chars = cssAnimation.chars; //an array of all the divs that wrap each character
+
+//var leFadeIn = $(".leFadeIn");
+//leFadeIn.html("<span>" + $leFadeIn.html().split("").join("</span><span>").split("<span> </span>").join("<span>&nbsp;</span>") + "</span>");
+
+TweenMax.staggerFrom(leFadeIn, 0.5, {x:"-20px", opacity:0, ease:Power3.easeInOut})
+
